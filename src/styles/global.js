@@ -18,6 +18,7 @@ export default createGlobalStyle`
   }
   a{
     text-decoration: none;
+    color: ${({ theme }) => theme.COLORS.FT_WHITE};
   }
   button{
     cursor: pointer;

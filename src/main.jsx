@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
       <Router>
         <Routes>
-          <Route path="/register" element={<SingIn />} />
+          <Route path="/login" element={<SingIn />} />
         </Routes>
       </Router>
     </ThemeProvider>
