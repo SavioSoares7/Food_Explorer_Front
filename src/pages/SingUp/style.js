@@ -17,7 +17,6 @@ export const Container = styled.main`
       gap: 20px;
     }
   }
-
   @media (max-width: 768px) {
     flex-direction: column;
 
@@ -29,8 +28,8 @@ export const Container = styled.main`
   }
 `;
 
-export const FormSingIn = styled.form`
-  min-height: 600px;
+export const FormSingUp = styled.form`
+  max-height: 600px;
 
   flex: 1;
   padding: 64px;
@@ -51,5 +50,9 @@ export const FormSingIn = styled.form`
     margin-top: 32px;
     display: block;
     text-align: center;
+  }
+  @media (max-width: 450px) {
+    min-height: 700px;
+    margin-bottom: 10px;
   }
 `;

@@ -1,4 +1,4 @@
-import { Container, FormSingIn } from "./style";
+import { Container, FormSingUp } from "./style";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../../assets/Logo.png";
 
-export function SingIn() {
+export function SingUp() {
   return (
     <Container>
       <div>
@@ -17,8 +17,14 @@ export function SingIn() {
         </h1>
       </div>
 
-      <FormSingIn>
-        <h5>Faça login</h5>
+      <FormSingUp>
+        <h5>Crie sua conta</h5>
+
+        <Input
+          placeholder="Exemplo: Maria da Silva"
+          labelName="Seu nome"
+          type="text"
+        />
 
         <Input
           placeholder="Exemplo: exmplo@exemplo.com.br"
@@ -31,9 +37,9 @@ export function SingIn() {
           type="password"
         />
 
-        <Button>Entrar</Button>
-        <Link to="/register">Criar uma conta</Link>
-      </FormSingIn>
+        <Button>Criar conta</Button>
+        <Link to="/login">Já tenho uma conta</Link>
+      </FormSingUp>
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 export default {
   COLORS: {
-    BG_PRIMARY: "#1E1E1E",
+    BG_PRIMARY: "#000A0F",
     BG_SECONDARY: "#001119",
 
     BG_RED: "#92000E",
