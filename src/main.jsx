@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import { SingIn } from "../src/pages/SingIn";
 import { SingUp } from "./pages/SingUp";
+import { Home } from "./pages/Home";
 
 import { ThemeProvider } from "styled-components";
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/login" element={<SingIn />} />
           <Route path="/register" element={<SingUp />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </ThemeProvider>

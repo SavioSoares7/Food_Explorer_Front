@@ -1,5 +1,5 @@
 import { ButtonContainer } from "./style";
 
-export function Button({ children }) {
+export function ButtonForm({ children }) {
   return <ButtonContainer>{children}</ButtonContainer>;
 }

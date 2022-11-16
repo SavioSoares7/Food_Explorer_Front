@@ -1,7 +1,7 @@
 import { Container, FormSingUp } from "./style";
 
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { ButtonForm } from "../../components/ButtonForm";
 
 import { Link } from "react-router-dom";
 
@@ -37,7 +37,7 @@ export function SingUp() {
           type="password"
         />
 
-        <Button>Criar conta</Button>
+        <ButtonForm>Criar conta</ButtonForm>
         <Link to="/login">Já tenho uma conta</Link>
       </FormSingUp>
     </Container>
