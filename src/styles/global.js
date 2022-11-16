@@ -20,6 +20,9 @@ export default createGlobalStyle`
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.FT_WHITE};
   }
+  svg{
+    cursor: pointer;
+  }
   button{
     cursor: pointer;
     background-color: ${({ theme }) => theme.COLORS.BG_RED};

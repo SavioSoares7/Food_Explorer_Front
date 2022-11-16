@@ -7,5 +7,6 @@ export default {
 
     FT_WHITE: "#E1E1E6",
     FT_WHITE_200: "#C4C4C4",
+    FT_GRAY: "#7C7C8A",
   },
 };
