@@ -4,6 +4,6 @@ export const API = [
     description:
       "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim",
     Price: "R$ 49,97",
-    img: "./assets/imagem1.png",
+    img: "../src/assets/imagem1.png",
   },
 ];

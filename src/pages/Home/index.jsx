@@ -5,6 +5,8 @@ import { BoxInfo, Container, MainCourse } from "./style";
 import InfoFood from "../../assets/food.png";
 import { API } from "../../API";
 
+import { BoxProduct } from "../../components/BoxProduct";
+
 import { TbMoodEmpty } from "react-icons/tb";
 
 export function Home() {
@@ -24,17 +26,10 @@ export function Home() {
         <MainCourse>
           <span>Pratos principais</span>
 
-          <div>
+          <div className="container-box">
             {API.length > 0 ? (
               API.map((item) => {
-                return (
-                  <div className="box-product">
-                    <img src={item.img} />
-                    <h6> {item.name} </h6>
-                    <p>{item.description}</p>
-                    <span> {item.Price} </span>
-                  </div>
-                );
+                return <BoxProduct item={item}></BoxProduct>;
               })
             ) : (
               <div className="empty">

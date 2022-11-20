@@ -51,4 +51,38 @@ export const MainCourse = styled.section`
       font-size: 50px;
     }
   }
+
+  > div.container-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    > div.box-product {
+      max-width: 300px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+
+      background-color: ${({ theme }) => theme.COLORS.BG_DARK};
+      padding: 56px 40px 40px 40px;
+
+      > h6 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      > p {
+        font-size: 14px;
+        color: ${({ theme }) => theme.COLORS.FT_GRAY_200};
+      }
+      > span {
+        font-size: 32px;
+        color: ${({ theme }) => theme.COLORS.FT_BLUE_LIGHT};
+      }
+    }
+  }
 `;
