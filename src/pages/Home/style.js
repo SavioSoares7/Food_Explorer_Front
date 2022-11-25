@@ -1,42 +1,74 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 1120px;
-  margin: 0 auto;
-`;
-
 export const BoxInfo = styled.div`
-  height: 260px;
-
-  margin-top: 164px;
+  max-width: 1120px;
+  margin: 192px auto;
   background-color: ${({ theme }) => theme.COLORS.BG_SECONDARY};
-
+  height: 260px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   > img {
     margin-bottom: 150px;
   }
 
   > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-
     > span {
       font-family: "Poppins";
-      font-size: 40px;
       font-weight: 500;
+      font-size: 40px;
     }
     > p {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
       font-size: 16px;
+      color: ${({ theme }) => theme.COLORS.FT_GRAY};
+    }
+  }
+
+  @media (max-width: 990px) {
+    > img {
+      display: none;
+    }
+    > div {
+      text-align: center;
     }
   }
 `;
 
 export const MainCourse = styled.section`
+  max-width: 1180px;
+  margin: 0 auto;
+
   margin-top: 48px;
+
+  position: relative;
+
+  .arrow-move {
+    position: absolute;
+    z-index: 999;
+
+    cursor: pointer;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 498px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  #arrow-left {
+    left: 0;
+  }
+  #arrow-right {
+    right: 0;
+  }
+
   > span {
     font-family: "Poppins";
     font-size: 32px;
@@ -53,36 +85,34 @@ export const MainCourse = styled.section`
   }
 
   > div.container-box {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 30px;
+    transition: 500ms all;
 
-    > div.box-product {
-      max-width: 300px;
+    overflow-x: hidden;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 18px;
+    position: relative;
 
-      background-color: ${({ theme }) => theme.COLORS.BG_DARK};
-      padding: 56px 40px 40px 40px;
-
-      > h6 {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-      }
-      > p {
-        font-size: 14px;
-        color: ${({ theme }) => theme.COLORS.FT_GRAY_200};
-      }
-      > span {
-        font-size: 32px;
-        color: ${({ theme }) => theme.COLORS.FT_BLUE_LIGHT};
-      }
+    &:hover .arrow-move {
+      opacity: 1;
+      transition: 500ms all;
     }
+
+    > button {
+      position: absolute;
+      left: 0;
+    }
+
+    div#arrow-left {
+      left: -10px;
+    }
+    div#arrow-right {
+      right: 0;
+    }
+  }
+  @media (max-width: 980px) {
+    text-align: center;
   }
 `;
