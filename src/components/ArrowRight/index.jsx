@@ -1,9 +1,9 @@
 import { Container } from "./style";
 import { AiOutlineRight } from "react-icons/ai";
 
-export function ArrowRight() {
+export function ArrowRight({ moveContainer }) {
   return (
-    <Container>
+    <Container onClick={moveContainer}>
       <AiOutlineRight />
     </Container>
   );

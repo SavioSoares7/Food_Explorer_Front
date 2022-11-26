@@ -1,9 +1,9 @@
 import { Container } from "./style";
 import { AiOutlineLeft } from "react-icons/ai";
 
-export function ArrowLeft() {
+export function ArrowLeft({ moveContainer }) {
   return (
-    <Container>
+    <Container onClick={moveContainer}>
       <AiOutlineLeft />
     </Container>
   );
