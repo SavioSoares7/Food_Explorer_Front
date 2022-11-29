@@ -6,11 +6,9 @@ import { BoxProduct } from "../../components/BoxProduct";
 
 import { useState } from "react";
 
-import { TbMoodEmpty } from "react-icons/tb";
-
 import { API } from "../../API";
 
-export function CarroselContainer({ title }) {
+export function CarroselContainer({ title, typeFood }) {
   const [scrollMove, setScrollMove] = useState(0);
 
   const handleLeftMove = () => {
@@ -42,18 +40,13 @@ export function CarroselContainer({ title }) {
           marginLeft: scrollMove,
         }}
       >
-        {API.length > 0 ? (
-          API.map((item) => {
-            if (item.category == "food") {
-              return <BoxProduct item={item}></BoxProduct>;
-            }
-          })
-        ) : (
-          <div className="empty">
-            <TbMoodEmpty />
-            <h1>Nenhum prato adicionado</h1>
-          </div>
-        )}
+        {API.filter((item) => {
+          console.log(typeFood);
+          return item.category == typeFood;
+        }).map((item) => {
+          console.log(item);
+          return <BoxProduct item={item} />;
+        })}
       </div>
     </Container>
   );
