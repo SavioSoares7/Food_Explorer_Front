@@ -7,6 +7,7 @@ export const Container = styled.footer`
 
   > div {
     display: flex;
+    flex-wrap: wrap;
     height: 77px;
 
     align-items: center;
@@ -18,6 +19,7 @@ export const Container = styled.footer`
     > a {
       display: flex;
       align-items: center;
+      gap: 11px;
     }
   }
 `;

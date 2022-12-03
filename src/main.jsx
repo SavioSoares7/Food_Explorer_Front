@@ -5,6 +5,8 @@ import { SingIn } from "../src/pages/SingIn";
 import { SingUp } from "./pages/SingUp";
 import { Home } from "./pages/Home";
 import { Request } from "./pages/Request";
+import { EditDish } from "./pages/EditDish";
+import { Payment } from "./pages/Payment";
 
 import { ThemeProvider } from "styled-components";
 
@@ -20,6 +22,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
       <Router>
         <Routes>
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/editdish" element={<EditDish />} />
           <Route path="/request" element={<Request />} />
           <Route path="/login" element={<SingIn />} />
           <Route path="/register" element={<SingUp />} />

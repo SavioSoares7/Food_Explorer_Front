@@ -4,8 +4,6 @@ import { ContainerTitle } from "../../components/ContainerTitle";
 
 import { Container } from "./style";
 
-import { IoIosArrowDown } from "react-icons/io";
-
 export function Request() {
   return (
     <>
