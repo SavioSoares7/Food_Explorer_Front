@@ -7,6 +7,8 @@ import { Home } from "./pages/Home";
 import { Request } from "./pages/Request";
 import { EditDish } from "./pages/EditDish";
 import { Payment } from "./pages/Payment";
+import { Order } from "./pages/Order";
+import { Food } from "./pages/Food";
 
 import { ThemeProvider } from "styled-components";
 
@@ -22,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
       <Router>
         <Routes>
+          <Route path="/food" element={<Food />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/editdish" element={<EditDish />} />
           <Route path="/request" element={<Request />} />
           <Route path="/login" element={<SingIn />} />
