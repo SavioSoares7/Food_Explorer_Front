@@ -3,7 +3,7 @@ import { IoIosPaper } from "react-icons/io";
 
 export function ButtonRequest({ children }) {
   return (
-    <Container to="/orders">
+    <Container to="/payment">
       <IoIosPaper size={26} />
       {children}
     </Container>
