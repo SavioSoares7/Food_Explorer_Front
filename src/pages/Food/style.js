@@ -5,6 +5,11 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 980px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   > img {
     border-radius: 50%;
     width: 300px;
@@ -27,6 +32,10 @@ export const Container = styled.div`
       align-items: center;
       gap: 20px;
       margin-top: 60px;
+
+      @media (max-width: 980px) {
+        justify-content: center;
+      }
     }
 
     > div {
@@ -34,6 +43,10 @@ export const Container = styled.div`
       align-items: center;
       gap: 30px;
       margin-top: 30px;
+
+      @media (max-width: 980px) {
+        justify-content: center;
+      }
 
       > span {
         font-size: 32px;
@@ -43,6 +56,7 @@ export const Container = styled.div`
       > div {
         display: flex;
         gap: 20px;
+
         > button {
           background-color: transparent;
           border: 0;
